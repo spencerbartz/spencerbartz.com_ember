@@ -1,5 +1,6 @@
 {
   "name": "spencer-bartz-portfolio",
   "dependencies": {
+    "bootstrap": "^3.3.7"
   }
 }

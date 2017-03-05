@@ -7,6 +7,15 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+  this.route('/', { path: '/welcome' }, function() {
+
+  });
+
+  this.route('projects', function() {
+    this.route('web-applications');
+    this.route('desktop-applications');
+    this.route('tools-and-libraries');
+  });
 });
 
 export default Router;
