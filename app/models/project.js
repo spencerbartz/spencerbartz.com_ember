@@ -4,5 +4,5 @@ export default DS.Model.extend({
   lastUpdated: DS.attr('string'),
   link:        DS.attr('string'),
   description: DS.attr('string'),
-  type:        DS.attr('string')
+  projectType: DS.attr('string')
 });

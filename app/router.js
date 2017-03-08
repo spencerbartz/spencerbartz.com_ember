@@ -7,9 +7,8 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('/', { path: '/welcome' }, function() {
 
-  });
+  this.route('/');
 
   this.route('projects', function() {
     this.route('web-applications');
