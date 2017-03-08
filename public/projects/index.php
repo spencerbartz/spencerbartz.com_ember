@@ -1,13 +1,15 @@
 <?php
 	include "dbconnect.php";
-	$project_type = "web";
+
+	$project_type = $_REQUEST["filter"]["project_type"];
+
 	$mysqli_connection = get_mysqli_connection("portfolio");
 	$sql = "SELECT * FROM projects WHERE project_type = '" . $project_type . "'";
 	$result_set = $mysqli_connection->query($sql);
 	$json_msg = array("projects" => array(), "errors" => array());
 
 	function push_error(&$json_msg, $error) {
-		array_push($json_msg["errors"],  array("message" => $error));
+		array_push($json_msg["errors"],  array("id" => "1", "message" => $error));
 	}
 
 	function add_record(&$json_msg, $row) {
@@ -15,10 +17,9 @@
 			array(
 				"id" => $row["id"],
 				"type" => "project",
-				"last-updated" => $row["last_updated"],
-				"link" => $row["link"],
+				"lastUpdated" => $row["last_updated"],
 				"description" => $row["description"],
-				"project-type" => $row["project_type"]
+				"projectType" => $row["project_type"]
 			)
 		);
 	}

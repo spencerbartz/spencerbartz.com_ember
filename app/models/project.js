@@ -1,8 +1,7 @@
   import DS from 'ember-data';
 
 export default DS.Model.extend({
-  lastUpdated: DS.attr('string'),
-  link:        DS.attr('string'),
+  lastUpdated: DS.attr('date'),
   description: DS.attr('string'),
   projectType: DS.attr('string')
 });

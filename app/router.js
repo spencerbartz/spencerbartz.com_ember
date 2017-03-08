@@ -14,6 +14,7 @@ Router.map(function() {
     this.route('web-applications');
     this.route('desktop-applications');
     this.route('tools-and-libraries');
+    this.route('full-stack');
   });
 });
 

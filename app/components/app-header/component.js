@@ -10,9 +10,9 @@ export default Ember.Component.extend({
         </div>
         <ul class="nav navbar-nav">
           <li class="active">{{link-to "Home" "/"}}</li>
-          <li>{{link-to "Web Applications" "projects.web-applications"}}</li>
-          <li>{{link-to "Desktop Applications" "projects.desktop-applications"}}</li>
-          <li>{{link-to "Tools and Libraries" "projects.tools-and-libraries"}}</li>
+          <li>{{link-to "Web Applications" "projects.web-applications" (query-params project_type="front_end")}}</li>
+          <li>{{link-to "Desktop Applications" "projects.desktop-applications" (query-params project_type="desktop_apps")}}</li>
+          <li>{{link-to "Tools and Libraries" "projects.tools-and-libraries" (query-params project_type="tool_lib")}})</li>
         </ul>
       </div>
     </nav>
