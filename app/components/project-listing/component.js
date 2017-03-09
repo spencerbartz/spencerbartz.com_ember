@@ -8,19 +8,17 @@ export default Ember.Component.extend({
     <table class="table">
       <thead>
         <tr>
-          <th>ID</th>
-          <th>Last Updated</th>
+          <th>Name</th>
           <th>Description</th>
-          <th>Type</th>
+          <th>Last Updated</th>
         </tr>
       </thead>
       <tbody>
         {{#each model as |project|}}
           <tr>
-            <td>{{project.id}}</td>
-            <td>{{project.lastUpdated}}</td>
+            <td>{{#link-to "projects.testpage"}}{{project.name}}{{/link-to}}</td>
             <td>{{project.description}}</td>
-            <td>{{project.projectType}}</td>
+            <td>{{project.lastUpdated}}</td>
           </tr>
         {{/each}}
       </tbody>

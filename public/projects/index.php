@@ -16,10 +16,11 @@
 		array_push($json_msg["projects"],
 			array(
 				"id" => $row["id"],
-				"type" => "project",
+				"name" => $row["name"],
 				"lastUpdated" => $row["last_updated"],
 				"description" => $row["description"],
-				"projectType" => $row["project_type"]
+				"projectType" => $row["project_type"],
+				"type" => "project",
 			)
 		);
 	}
