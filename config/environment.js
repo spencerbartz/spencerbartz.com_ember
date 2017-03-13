@@ -4,7 +4,7 @@ module.exports = function(environment) {
   var ENV = {
     modulePrefix: 'spencer-bartz-portfolio',
     environment: environment,
-    rootURL: 'http://www.spencerbartz.com/js/spencerbartz_dot_com/',
+    rootURL: '/',
     locationType: 'hash',
     EmberENV: {
       FEATURES: {
@@ -32,7 +32,7 @@ module.exports = function(environment) {
 
     ENV['ember-cli-mirage'] = {
       enabled: false
-    }
+    };
   }
 
   if (environment === 'test') {
